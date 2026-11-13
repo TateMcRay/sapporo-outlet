@@ -1,0 +1,2 @@
+# sapporo-outlet
+Public
