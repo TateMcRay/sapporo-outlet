@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101319"><meta name="description" content="札幌北廣島三井 Outlet 品牌搜尋與分類索引">
+<title>札幌北廣島三井 Outlet｜品牌搜尋器</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1015;--surface:#181c24;--text:#f5f6f8;--muted:#9ca6b5;--line:#303640;--accent:#95c8ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif}
+main{width:min(1050px,calc(100% - 32px));margin:35px auto 60px}header{margin-bottom:22px} .eyebrow{font-size:12px;letter-spacing:.2em;color:var(--accent);font-weight:700}h1{font-size:clamp(23px,4vw,36px);line-height:1.25;letter-spacing:-.035em;margin:8px 0} .intro{color:var(--muted);margin:10px 0 0;max-width:760px}
+.panel{border:1px solid var(--line);border-radius:19px;padding:clamp(15px,3vw,26px);background:var(--surface);box-shadow:0 12px 40px #0002}
+.search{width:100%;padding:14px 17px;border:1px solid #616d7d;border-radius:12px;background:#0e1117;color:var(--text);font-size:16px;outline:none}.search:focus{border-color:var(--accent);box-shadow:0 0 0 3px #95c8ff26}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 10px}.filter{font-size:13px;border:1px solid #46505d;background:transparent;color:#dce2e9;cursor:pointer;border-radius:999px;padding:6px 12px}.filter[aria-pressed=true]{background:#fff;color:#151719;border-color:#fff}.summary{font-size:13px;color:var(--muted);margin:12px 0 0}.category{padding:20px 0;border-bottom:1px solid var(--line)}.category:last-child{border-bottom:0;padding-bottom:4px}.category h2{font-size:16px;margin:0 0 11px}.brands{display:flex;flex-wrap:wrap;gap:8px}.brand{border:1px solid #3b4552;background:#202630;color:#f3f6fb;padding:6px 11px;border-radius:10px;font-size:14px}mark{color:inherit;background:#3c5875;border-radius:3px} .none{padding:30px 0;color:var(--muted)}footer{color:var(--muted);font-size:12px;margin-top:20px}a{color:var(--accent)}.top{display:flex;align-items:center;justify-content:space-between;gap:15px}.clear{background:none;border:0;color:var(--accent);cursor:pointer;font:inherit}.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:15px}.links a{text-decoration:none;border:1px solid #3e4b59;border-radius:9px;padding:7px 10px}.links a:hover{border-color:var(--accent)}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">HOKKAIDO · SHOPPING GUIDE</div><h1>MITSUI OUTLET PARK 札幌北廣島</h1><p class="intro">品牌搜尋器｜快速搜尋 Nike、COACH、BEAMS 等品牌，或按精品、男女服飾、運動戶外、鞋包、生活家居及美食分類瀏覽。</p></header>
+<section class="panel" aria-label="品牌搜尋"><label for="search" style="display:block;margin-bottom:8px;font-weight:600">搜尋品牌</label><input class="search" id="search" type="search" autocomplete="off" placeholder="輸入品牌名稱，例如 Nike、COACH、SNIDEL" aria-label="搜尋品牌"><div class="filters" id="filters" aria-label="品牌分類"></div><div class="top"><div class="summary" id="summary" aria-live="polite"></div><button class="clear" id="clear" type="button">清除篩選</button></div><div id="results"></div></section>
+<footer>此為旅行規劃用的非官方品牌索引，依先前整理的品牌清單製作；部分是聯合店鋪內品牌或曾列出品牌，不保證全部目前仍營業。實際店家、品牌與營業資訊請以商場官網為準。<div class="links"><a href="https://mitsui-shopping-park.com/tw/mop/sapporo/search/index.html" target="_blank" rel="noopener noreferrer">官方繁中店鋪名錄 ↗</a><a href="https://mitsui-shopping-park.com/mop/sapporo/search/index.html" target="_blank" rel="noopener noreferrer">官方日文店鋪名錄 ↗</a><a href="https://www.google.com/maps/search/?api=1&query=MITSUI+OUTLET+PARK+Sapporo+Kitahiroshima" target="_blank" rel="noopener noreferrer">Google 地圖 ↗</a></div></footer>
+</main><script>
+const data=[
+['精品・設計師品牌',`ARMANI FACTORY STORE|FERRAGAMO|VERSACE|JIMMY CHOO|BALLY|COACH|COACH Men's POP-UP|MICHAEL KORS|FURLA|MARC JACOBS|TORY BURCH|kate spade new york|ETRO|KENZO|BOSS|DIESEL|Max Mara / Intrend|MooRER / SLOWEAR|POLO RALPH LAUREN|agnès b.|TASAKI|SWAROVSKI`],
+['男女服飾・日系選物',`BEAMS OUTLET|UNITED ARROWS LTD. OUTLET|URBAN RESEARCH warehouse|nano・universe|B.C STOCK|ABAHOUSE / Rouge vif La cle|GALLARDAGALANTE|MARGARET HOWELL A.G.O.|BROOKS BROTHERS|TOMMY HILFIGER|Calvin Klein|REPLAY|AVIREX DEPOT|COLONY 2139|Ciaopanic / cheztoi|MACKINTOSH LONDON|MACKINTOSH PHILOSOPHY|MITSUMINE|NICOLE|EDWIN|Levi's|G-STAR RAW|LACOSTE|Abercrombie & Fitch|Gap Outlet|BANANA REPUBLIC|AZUL by moussy|GLOBAL WORK|LOWRYS FARM|CROCODILE|HUF|WEGO|graniph`],
+['女裝・流行服飾',`gelato pique|SNIDEL|FRAY I.D|LILY BROWN|JEANASiS|earth music & ecology|NICE CLAUP|axes femme|SM2|AS KNOW AS|urnis OUTLET|INGNI|OLIVE des OLIVE|ANAP|STUDIO CLIP`],
+['運動・戶外・高爾夫',`Nike|New Balance|PUMA|UNDER ARMOUR|Onitsuka Tiger|THE NORTH FACE|HELLY HANSEN|mont-bell|Columbia|MAMMUT|AIGLE|KEEN|DESCENTE|le coq sportif|OAKLEY|Timberland|Champion|BILLABONG|QUIKSILVER|TaylorMade|Callaway|adidas Golf|PEARLY GATES|Jack Bunny|SORA OUTLET`],
+['鞋子・包包・旅行用品',`UGG|crocs|REGAL|RED WING|HAWKINS|DANNER|COLE HAAN|GREGORY|TUMI|ZERO HALLIBURTON|Samsonite BLACK LABEL|ACE OUTLET|TRARIUM by ACE|russet|ORiental TRaffic|HIMIKO|HUNTING WORLD`],
+['配件・鐘錶・美妝',`Ray-Ban|CITIZEN|G-SHOCK|GARMIN|OWNDAYS|festaria bijou SOPHIA|SABON|THE COSMETICS COMPANY STORE|Celule|Wacoal FACTORY STORE|Triumph|aimerfeel|GUNZE OUTLET|帽子屋 OUTLET`],
+['生活家居・親子用品',`Francfranc BAZAR|ZWILLING|T-fal|DANSK|THERMOS|TEMPUR|Simmons Sleep Shop|SHOWA NISHIKAWA|Anker Store|LEGO Store|Sylvanian Families / Masterpiece|mezzo piano|F.O.FACTORY|Matsumoto Kiyoshi OUTLET`],
+['美食・飲品・伴手禮・服務',`北海道四季彩館|GODIVA|Starbucks|Krispy Kreme Doughnuts|TULLY'S COFFEE & TEA|LUPICIA Bon Marché|路地裏カリィ 侍.|京都宇治 茶想もりた園|SEVEN-ELEVEN|reparera`]
+].map(([name,txt])=>({name,brands:txt.split('|')}));
+const $=id=>document.getElementById(id);let current='全部';
+function el(tag,cls,content){const node=document.createElement(tag);if(cls)node.className=cls;if(content!==undefined)node.textContent=content;return node}
+function draw(){const q=$('search').value.trim().toLocaleLowerCase();$('results').replaceChildren();let count=0,groups=0;data.forEach(group=>{if(current!=='全部'&&current!==group.name)return;const matches=group.brands.filter(s=>s.toLocaleLowerCase().includes(q));if(!matches.length)return;groups++;count+=matches.length;const sec=el('section','category'),heading=el('h2','',group.name+'（'+matches.length+'）'),wrap=el('div','brands');matches.forEach(b=>{const item=el('span','brand',b);wrap.append(item)});sec.append(heading,wrap);$('results').append(sec)});$('summary').textContent=`顯示 ${count} 個品牌・${groups} 個分類`;if(!count)$('results').append(el('div','none','沒有符合條件的品牌，試試其他名稱或清除篩選。'));[...$('filters').children].forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.name===current)))}
+['全部',...data.map(d=>d.name)].forEach(name=>{const b=el('button','filter',name);b.type='button';b.dataset.name=name;b.setAttribute('aria-pressed',String(name===current));b.addEventListener('click',()=>{current=name;draw()});$('filters').append(b)});
+$('search').addEventListener('input',draw);$('clear').addEventListener('click',()=>{$('search').value='';current='全部';draw();$('search').focus()});draw();
+</script></body></html>
